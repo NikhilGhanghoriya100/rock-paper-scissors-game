@@ -1,0 +1,171 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f0f4f8, #d9e4f5);
+    transition: all 0.3s ease-in-out;
+}
+
+h1 {
+    background-color: #081b31;
+    color: white;
+    text-align: center;
+    height: 5rem;
+    line-height: 5rem;
+    
+}
+
+
+.choice {
+    height: 165px;
+    width: 165px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: all 0.3s ease-out;
+
+}
+
+.choice:hover {
+    cursor: pointer;
+    background-color: #081b31;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.choice:hover img {
+    transform: rotate(10deg);
+}
+
+.choices {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+    transition: all 0.8s ease;
+}
+
+.score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem ;
+    font-size: 1.5rem;
+}
+
+#user-score, 
+#comp-score {
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+
+.msg-container{
+    margin-top: 4rem;
+    margin-bottom: 8rem;
+}
+
+#msg {
+    background-color: #081b31;
+    color: white;
+    font-size: 2rem;
+    display: inline-block;
+    padding:1rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+
+/* Responsive Design  */
+
+/* For tablets and smaller laptops  */
+
+@media (max-width: 1024px) {
+    .choice {
+        height: 130px;
+        width: 130px;
+    }
+
+    img {
+        height: 120px;
+        width: 120px;
+    }
+
+    .choices {
+        gap: 2rem;
+        margin-top: 4rem;
+    }
+
+    .score-board {
+        gap: 2rem;
+        font-size: 1.3rem;
+    }
+
+    #msg {
+        font-size: 1.8rem;
+    }
+} 
+
+/* For mobile screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+        height: 4rem;
+        line-height: 5rem;
+    }
+
+    .choices {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 3rem;
+    }
+
+    .choice {
+        height: 100px;
+        width: 100px;
+    }
+
+    img {
+        height: 90px;
+        width: 90px;
+    }
+
+    .score-board {
+        flex-direction: row;
+        gap: 2.5rem;
+        margin-top: 2rem;
+        font-size: 1.2rem;
+    }
+
+    #user-score,
+    #comp-score {
+        font-size: 2rem;
+    }
+
+    .msg-container {
+        margin-top: 2rem;
+    }
+
+    #msg {
+        font-size: 1.4rem;
+        padding: 0.8rem;
+    }
+} 
